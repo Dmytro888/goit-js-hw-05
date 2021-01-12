@@ -1,8 +1,22 @@
 // Напиши класс Car с указанными свойствами и методами.
 
 class Car {
+  // 1 вариант 
   static getSpecs (car) {
-    console.log(car);
+    let carKeys = Object.keys(car)
+    let carValue = Object.values(car)
+    for (let i = 0; i < carKeys.length; i++){
+      console.log(carKeys[i]+':'+carValue[i]);
+    }
+
+//  2 вариант??? 
+
+    console.log(`
+    maxSpeed: ${car.maxSpeed}, 
+    speed: ${car.speed}, 
+    isOn: ${car.isOn},
+    distance: ${car.distance},
+    price: ${car.price}`);
   }
 
   constructor (car) {
